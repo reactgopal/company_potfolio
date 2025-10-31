@@ -1,0 +1,785 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global CSS Variables from the First Image */
+:root {
+  --bg-color-white: #ffffff;
+  --bg-color-light-grey: #f9f9f9;
+  --bg-color-lightest-grey: #f5f5f5;
+  --bg-color-dark-grey: #1f1f1f;
+  --bg-color-black: #000000;
+  --bg-color-green: #00ff00;
+  --primary-color: #000000;
+
+
+  --text-color-white: #ffffff;
+  --text-color-light-grey: #777777;
+  --text-color-dark-grey: #1d1d26;
+  --text-color-black: #000000;
+
+  --text-sub-color: #77777d;
+
+  --fill-color-light: #ffffff;
+  --fill-color-medium: #777777;
+  --fill-color-dark: #000000;
+
+  --border-color-light: #ededee;
+  --border-color-medium: rgba(119, 119, 125, .2);
+  --border-color-dark: #000000;
+  --button-border: rgba(119, 119, 125, .2);
+
+  --font-family: 'Syne', sans-serif;
+  --font-size-small: 0.875rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.25rem;
+}
+
+/* Body Styling */
+body {
+  min-height: 100vh;
+  /* ensure scrolling */
+
+  font-family: var(--font-family) !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  background-color: var(--bg-color-light-grey);
+  color: var(--text-color-dark-grey);
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header Styling */
+
+
+/* Button Styles */
+button {
+  cursor: pointer;
+  background-color: var(--bg-color-dark-grey);
+  color: var(--text-color-white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+}
+
+/* Links Styling */
+a {
+  text-decoration: none !important;
+  font-size: var(--font-size-medium) !important;
+  color: var(--text-sub-color) !important;
+  font-family: var(--font-family) !important;
+}
+
+li {
+  list-style: none;
+}
+
+/* Section Styling for Contrast */
+
+.container {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Small devices (≥576px) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (≥992px) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (≥1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Ultra large screens (≥1400px) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: var(--text-color-black);
+  /* Default dark text */
+}
+
+/* Specific heading sizes */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+
+.card {
+  background-color: var(--bg-color-white);
+  border: 1px solid var(--border-color-light);
+  border-radius: 8px;
+  padding: 1.5em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: var(--font-size-large);
+}
+
+.card p {
+  font-size: var(--font-size-medium);
+}
+
+/* Pricing Plan */
+.pricing-plan {
+  background-color: var(--bg-color-lightest-grey);
+  padding: 2em 0;
+}
+
+.pricing-plan h2 {
+  font-size: var(--font-size-large);
+  color: var(--text-color-dark-grey);
+}
+
+.pricing-plan .plan {
+  background-color: var(--bg-color-white);
+  padding: 1em;
+  border: 1px solid var(--border-color-light);
+  border-radius: 8px;
+  margin-top: 1em;
+}
+
+.pricing-plan .plan h3 {
+  font-size: var(--font-size-medium);
+}
+
+.pricing-plan .plan p {
+  font-size: var(--font-size-small);
+}
+
+/* ------------------------------------title text css start--------------------------------------------- */
+
+
+.section-title {
+  margin-bottom: 80px;
+}
+
+.section-title h2 {
+  margin-bottom: 15px;
+  font-size: 50px;
+}
+
+.section-title p {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* ------------------------------------title text css end--------------------------------------------- */
+
+
+/* ------------------------------------header css start--------------------------------------------- */
+/* ------------------------------------header css start--------------------------------------------- */
+
+.main-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-color-white);
+  z-index: 1000;
+  padding: 0px;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color-white);
+  transition: all 0.5s ease;
+}
+
+.fixed-header .header-inner {
+  padding: 1px 0;
+  transition: all .5s ease;
+  border-bottom: 1px solid rgba(119, 119, 125, .2);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.header-inner h2 {
+  color: var(--text-color-black);
+}
+
+/* Hamburger Icon */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 24px;
+  width: 30px;
+}
+
+.hamburger-icon span {
+  background-color: var(--text-color-black);
+  height: 3px;
+  width: 100%;
+  border-radius: 3px;
+  margin: 3px 0;
+}
+
+/* Main menu default (desktop) */
+.main-menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu ul li {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main-menu li a {
+  color: var(--text-sub-color);
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.main-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.main-menu li a:hover {
+  color: var(--text-color-black);
+}
+
+.main-menu li a:hover::after {
+  opacity: 1;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .hamburger-icon {
+    display: flex;
+  }
+
+  .main-menu {
+    width: 100%;
+    background-color: var(--bg-color-white);
+    position: absolute;
+    top: 100%;
+    /* appears below header */
+    left: 0;
+    z-index: 999;
+    border-top: 1px solid #eee;
+  }
+
+  .main-menu.open {
+    display: block;
+  }
+
+  .main-menu ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .main-menu ul li {
+    padding: 10px 0;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner h2 {
+    font-size: 18px;
+  }
+
+  .main-menu ul li {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}
+
+/* ------------------------------------header css end--------------------------------------------- */
+/* ------------------------------------hero css start--------------------------------------------- */
+.container-inner {
+  background: #E6EAEE;
+  border-radius: 15px;
+  padding: 50px 25px;
+  border: 1px solid rgb(237, 237, 238);
+}
+
+.hero-content {
+
+  padding: 100px 50px;
+  position: relative;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-weight: 500;
+  line-height: 68px;
+  margin: 10px 0;
+  font-size: 80px;
+  text-transform: uppercase;
+}
+
+.hero-content h1 span {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+
+.hero-content .job {
+  display: inline-block;
+  background-color: #f5f5f5;
+  color: var(--text-sub-color);
+  padding: 15px 40px;
+  margin-top: 10px;
+}
+
+.hero-content .job span {
+  position: relative;
+  display: inline-block;
+  padding-right: 15px;
+  margin-right: 10px;
+}
+
+.hero-content .job span:last-child {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-content .job span::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #00000026;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+}
+
+/* ------------------------------------hero css end--------------------------------------------- */
+/* ------------------------------------about css start--------------------------------------------- */
+.about-area {
+  padding: 100px 0;
+  /* background: var(--bg-color-light-grey); */
+}
+
+.about-area .row {
+  display: flex;
+  align-items: center;
+}
+
+.about-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Left Image Card */
+.about-image-part {
+  text-align: center;
+  padding: 40px;
+  background: var(--bg-color-white);
+  border: 1px solid var(--border-color-light);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.about-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.about-image-part h2 {
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.about-btn {
+  margin: 0 !important;
+  display: inline-flex;
+  color: rgb(255, 255, 255);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(237, 237, 238);
+  border-image: initial;
+  padding: 15px 20px 10px;
+  border-radius: 30px;
+}
+
+.about-btn h6 {
+  font-weight: 400;
+  color: rgb(119, 119, 125);
+  margin-bottom: 0px;
+  margin-right: 15px;
+  margin-top: -5px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--bg-color-green);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.about-social {
+  margin-top: 30px;
+}
+
+.about-social ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.about-social ul li {
+  display: inline-block;
+  margin: 0px 15px;
+}
+
+.about-social ul li a {
+  font-size: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.05);
+  border-image: initial;
+  padding: 10px 12px;
+}
+
+.about-icons:hover {
+  color: var(--text-color-dark-grey);
+  transition: 0.3s;
+}
+
+/* Right Content */
+.about-content-part {
+  /* horizontal center */
+  flex: 1;
+  min-width: 300px;
+
+}
+
+.about-title {
+  font-size: 55px;
+  line-height: 72px;
+  margin-bottom: 20px;
+  color: var(--text-color-dark-grey);
+}
+
+.about-content-part h2 span {
+  padding: 0px 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-image: initial;
+}
+
+.hero-btn {
+  margin-top: 30px;
+}
+
+.theme-btn {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  text-transform: none;
+  background: var(--primary-color);
+  border: 1px solid var(--button-border);
+  margin: 0px 5px 10px 0px;
+  overflow: visible;
+  border-radius: 2px;
+  padding: 20px 34px;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  color: rgb(0, 0, 0);
+  border: 1px solid var(--button-border);
+  text-decoration: none;
+  transition: 0.3s;
+  background: transparent;
+}
+
+/* Skills list */
+.skills-list {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 10px 20px;
+  font-size: var(--font-size-medium);
+  color: var(--text-sub-color);
+}
+
+
+/* ------------------------------------about css end--------------------------------------------- */
+/* ------------------------------------service css start--------------------------------------------- */
+.services-area {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.service-item {
+  text-align: left;
+  background: #E6EAEE;
+  transition: 0.5s;
+  padding: 60px 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color-medium);
+}
+
+.service-item:hover {
+  border: 1px solid var(--text-color-dark-grey);
+
+  /* background: var(--bg-color-white);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px); */
+}
+
+.service-item h4 {
+  color: var(--subtitle-color);
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.service-item p {
+  margin-bottom: 0px;
+  color: var(--text-sub-color);
+}
+
+/* ------------------------------------service css end--------------------------------------------- */
+/* ------------------------------------resume css start--------------------------------------------- */
+.experience-list {
+  padding: 40px;
+  border: 1px solid rgba(0, 0, 0, .05);
+  border-radius: 10px;
+}
+
+.resume-area {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #E6EAEE;
+}
+
+.resume-item {
+  display: flex;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border-bottom: 1px solid rgba(119, 119, 125, 0.2);
+}
+
+.resume-item .icon {
+  -webkit-box-flex: 0;
+  margin-right: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 20px;
+  flex: 0 0 auto;
+  transition: 0.5s;
+  background: rgb(249, 249, 249);
+  border-radius: 12px;
+}
+
+.resume-item .content .years {
+  line-height: 1;
+  display: block;
+  margin-bottom: 20px;
+  color: var(--black-color);
+}
+
+.resume-item .content .company {
+  color: rgb(119, 119, 125);
+  font-size: 16px;
+}
+
+/* ------------------------------------resume css end--------------------------------------------- */
+/* ------------------------------------contact css start--------------------------------------------- */
+.contact-area {
+  padding: 100px 0;
+}
+
+.contact-content-part {
+  background: #E6EAEE;
+
+
+  padding: 50px 30px 20px 40px;
+  border-radius: 10px;
+}
+
+.single-contact h2 {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  font-weight: 500;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: var(--subtitle-color);
+}
+
+.single-contact {
+  padding-bottom: 20px;
+}
+
+.contact-form-area {
+  padding: 40px;
+  border: 1px solid rgba(0, 0, 0, .05);
+  border-radius: 10px;
+}
+
+.contact-form-area .form-group {
+  margin-bottom: 32px;
+}
+
+.contact-form-area .form-group label {
+  font-size: 16px;
+  color: #77777d !important;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.contact-form-area .form-group .form-control {
+  font-size: 16px;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.3;
+  padding: 19px 20px;
+  background: #f9f9f9;
+  border: 1px solid rgba(119, 119, 125, .2);
+  border-radius: 10px;
+}
+
+.contact-form-area .form-group .for-icon {
+  right: 26px;
+  font-size: 16px;
+  margin-bottom: 0;
+  position: absolute;
+  margin-top: -45px;
+  color: #000;
+}
+
+/* ------------------------------------contact css end--------------------------------------------- */
