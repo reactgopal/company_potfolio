@@ -1,17 +1,33 @@
+import { motion } from "framer-motion";
 export default function Contact() {
     return (
         <section id="contact" className="contact-area">
             <div className="container">
                 {/* Section Heading */}
-                <div className="section-title text-center">
+                <motion.div
+                    className="section-title text-center"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true }} // animate only once when visible
+                >
                     <p>Contact</p>
                     <h2>Get in Touch with Me!</h2>
-                </div>
+                </motion.div>
 
-                <div className="row">
+                <motion.div
+                    className="row"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true }} // animate only once when visible
+                >
                     {/* Contact Info */}
                     <div className="col-lg-4">
-                        <div className="contact-content-part">
+                        <div
+                            className="contact-content-part"
+
+                        >
                             <div className="single-contact">
                                 <div className="contact-icon">
                                     {/* Location Icon */}
@@ -97,7 +113,7 @@ export default function Contact() {
                             </form>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section >
     );

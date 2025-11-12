@@ -5,14 +5,20 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
 import { GoDownload } from "react-icons/go";
-
+import { motion } from 'framer-motion';
 
 
 export default function About() {
     return (
         <section id="about" className="about-area">
             <div className="container">
-                <div className="row">
+                <motion.div
+                    className="row"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    viewport={{ once: true }} // animate only once when visible
+                >
                     <div className="col-lg-5">
                         <div className="about-image-part">
                             <img src={profile} alt="about" className="about-img" />
@@ -56,7 +62,7 @@ export default function About() {
                             <div className='hero-btn'>
                                 <button className="theme-btn">
                                     Download CV
-                                    <GoDownload className='ms-1 fs-6'/>
+                                    <GoDownload className='ms-1 fs-6' />
                                 </button>
                             </div>
 
@@ -70,7 +76,7 @@ export default function About() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
         </section>

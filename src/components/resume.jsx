@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { motion } from "framer-motion";
 export default function Resume() {
   return (
     <>
@@ -7,13 +7,25 @@ export default function Resume() {
         <div className="container">
           <div className="row">
             <div className="col-xl-12 col-lg-12">
-              <div className='section-title text-center '>
+              <motion.div
+                className='section-title text-center '
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }} // animate only once when visible
+              >
                 <p>Experience</p>
                 <h2> Professional Resume</h2>
-              </div>
+              </motion.div>
             </div>
           </div>
-          <div className="row">
+          <motion.div
+            className="row"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }} // animate only once when visible
+          >
             <div className="col-xl-6 col-md-6">
               <div className='experience-list'>
                 <div className='resume-item'>
@@ -107,7 +119,7 @@ export default function Resume() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
